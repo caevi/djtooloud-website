@@ -1,0 +1,76 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e4e4e494;  /* Change navbar background to white */
+  padding: 15px 20px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);  /* Optional shadow for depth */
+}
+
+/* Logo container styles */
+.navbar .logo {
+  display: flex;
+  align-items: center;  /* Vertically center the items */
+}
+
+.navbar .logo img {
+  height: 40px;  /* Adjust logo size */
+  width: auto;
+  margin-right: 10px;  /* Space between the logo and the text */
+}
+
+/* Apply Bebas Neue font to the logo text */
+.navbar .logo h1 {
+  color: rgb(150, 15, 15);  /* Change the logo text color to black */
+  nav {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  font-size: 36px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Slightly spaced letters for a more stylish effect */
+}
+
+/* Navbar links styling */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px; /* Space out the items */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;  /* Change link text color to black */
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff6347; /* Hover effect color (tomato) */
+  transform: scale(1.05); /* Slightly scale the link on hover */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,17 @@
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the icons */
+    margin-top: 30px; /* Space above the icons */
+  }
+  
+  .social-icon {
+    font-size: 2rem;
+    color: #333; /* Icon color */
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #FF6F61; /* Change color on hover */
+  }
+  

@@ -1,0 +1,98 @@
+/* About Me Section */
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Title Section */
+  .about-me h1 {
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Description Section */
+  .about-me .description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 50px;
+  }
+  
+  /* Two-column Layout */
+  .about-me .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+  }
+  
+  /* Image Section */
+  .about-me .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 300px;
+  }
+  
+  .about-me .image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Text Section */
+  .about-me .text-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-me .text-container p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Button for Listening to Latest Video */
+  .about-me .listen-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* Added margin to make the button lower */
+  }
+  
+  .about-me .listen-button-container .listen-button {
+    background-color: #ff6347; /* A vibrant color for the button */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .about-me .listen-button-container .listen-button:hover {
+    background-color: #e55347; /* Darken the button color on hover */
+    transform: scale(1.05); /* Slightly increase the button size on hover */
+  }
+  
