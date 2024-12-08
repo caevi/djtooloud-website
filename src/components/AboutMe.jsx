@@ -26,11 +26,10 @@ const AboutMe = () => {
 
   return (
     <div className="about-me">
-      {/* Autoplay video background */}
       <div className="about-me-top">
-        {/* Only render the video if not on mobile */}
+        {/* Video background stays in the background */}
         {!isMobile && (
-          <video autoPlay muted loop className="background-video">
+          <video autoPlay muted loop className="background-video" playsInline>
             <source src="/tiktok.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

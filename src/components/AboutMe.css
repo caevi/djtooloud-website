@@ -30,6 +30,7 @@
   }
 }
 
+/* Video background */
 .background-video {
   position: absolute;
   top: 0;
@@ -38,39 +39,21 @@
   height: 100%;
   object-fit: cover;
   z-index: -1; /* Send the video behind other content */
+  pointer-events: none; /* Disable interactions with the video */
 }
 
+/* Content overlay on top of the video */
 .overlay-content {
   position: relative;
   z-index: 1; /* Ensure content is above the video */
   color: white;
   text-align: center;
-  padding: 20px;
-}
-
-
-
-.about-me-top .background-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.about-me-top .overlay-content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
+  padding: 115px;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
-  padding: 120px;
   border-radius: 10px;
 }
 
+/* About Me heading and description styling */
 .about-me-top h1 {
   font-size: 2.5rem;
   font-family: 'Bebas Neue', sans-serif;
@@ -133,6 +116,7 @@
   line-height: 1.6;
 }
 
+/* Listen button styling */
 .listen-button-container {
   display: flex;
   justify-content: center;
@@ -158,6 +142,7 @@
 
 /* Media Queries */
 
+/* For tablets (max-width: 768px) */
 @media (max-width: 768px) {
   .about-me-top {
     height: 1000px; /* Adjusted height for tablets */
