@@ -1,0 +1,45 @@
+
+.mixes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fffbfb;
+    text-align: center;
+  }
+  
+  .mixes h1 {
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #7f2317;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .mix-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mix-attribution {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-top: 10px;
+  }
+  
+  .mix-attribution a {
+    color: #68251b;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .mix-attribution a:hover {
+    text-decoration: underline;
+  }
+  

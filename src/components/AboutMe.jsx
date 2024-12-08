@@ -1,15 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';  // Import Link for routing
+import { Link } from 'react-router-dom'; // Import Link for routing
 import './AboutMe.css';
 import Socials from './Socials'; // Import Socials component
+
 
 const AboutMe = () => {
   return (
     <div className="about-me">
-      <h1>About DJ TOOLOUD</h1>
-      <p className="description">
-        DJ TOOLOUD is known for his energetic mixes and ability to get any crowd moving. Whether it's a club, a festival, or a private event, he's sure to bring the heat and keep the music pumping all night long.
-      </p>
+      {/* Autoplay video background */}
+      <div className="about-me-top">
+        <video autoPlay muted loop className="background-video">
+          <source src="/tiktok.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="overlay-content">
+          <h1>About DJ TOOLOUD</h1>
+          <p className="description">
+            DJ TOOLOUD is known for his energetic mixes and ability to get any crowd moving. Whether it's a club, a festival, or a private event, he's sure to bring the heat and keep the music pumping all night long.
+          </p>
+        </div>
+      </div>
       <div className="content">
         {/* Image Section */}
         <div className="image-container">

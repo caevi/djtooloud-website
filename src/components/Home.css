@@ -1,83 +1,86 @@
-/* Importing Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Keyframes for pop-up effect */
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /* General Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif; /* Using Poppins font for the entire page */
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Home Page container */
-/* Ensure the main container takes up full screen height */
 .home {
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    flex-direction: column; /* Stack elements vertically */
-    min-height: 100vh; /* Full viewport height */
-    text-align: center; /* Center the text */
-    padding: 20px; /* Add some padding around the section */
-  }
-  
-  /* Style for the home-content section */
-  .home-content {
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Align items vertically */
-    flex-direction: row; /* Place the image and text side by side */
-    gap: 40px; /* Increased space between image and text */
-    max-width: 1200px; /* Increased max-width to allow more space */
-    width: 100%; /* Allow the content to take full width */
-    padding: 40px; /* More padding for a less empty feel */
-  }
-  
-  /* Socials component will stay at the bottom of the page */
-  .socials {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between the icons */
-    margin-top: 30px; /* Space above the icons */
-    margin-bottom: 20px; /* Some space from the bottom */
-  }
-  
-  .social-icon {
-    font-size: 2rem;
-    color: #333; /* Icon color */
-    transition: color 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    color: #FF6F61; /* Change color on hover */
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden; /* Prevent unwanted scrollbars */
+}
 
+/* Animating the home-content section */
+.home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slightly off-screen */
+  animation: fadeInUp 1s ease-out forwards; /* Fade in and move up */
+}
 
+/* Keyframes for fade-in and slide-up effect */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Image Container */
 .home-image {
-  flex: 1; /* Makes the image container take up available space */
+  flex: 1;
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: popUp 1.5s ease-out forwards; /* Pop-up effect */
 }
 
 .dj-image {
   width: 100%;
   height: auto;
-  max-width: 500px; /* Adjust image size */
+  max-width: 500px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  animation: popUp 1.5s ease-out forwards; /* Pop-up effect */
 }
 
 /* Text Container */
 .home-text {
-  flex: 2; /* Makes the text container take up more space */
+  flex: 2;
   padding: 30px;
   text-align: left;
-  background-image:urL("setup.jpg");
+  background-image: url("setup.jpg");
   background-position: center;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 2s ease-out forwards; /* Delayed fade-in */
 }
 
 .home-text h1 {
@@ -91,6 +94,22 @@ body {
   font-size: 1.5rem;
   color: #ffffffd5;
   line-height: 1.6;
+}
+
+.learn-more-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #5d120b44;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.learn-more-btn:hover {
+  background-color: #bf3b32;
 }
 
 /* Responsive Design */
@@ -109,22 +128,6 @@ body {
   }
 
   .dj-image {
-    max-width: 80%; /* Resize the image on small screens */
+    max-width: 80%;
   }
 }
-.learn-more-btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #FF6F61; /* A bright color for the button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px; /* Space between the text and the button */
-  }
-  
-  .learn-more-btn:hover {
-    background-color: #FF3B2D; /* Change color when hovering */
-  }
-  

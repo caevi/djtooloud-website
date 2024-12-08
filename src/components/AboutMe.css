@@ -1,98 +1,217 @@
-/* About Me Section */
 .about-me {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Updated about-me-top for video background */
+.about-me-top {
+  position: relative;
+  height: 400px; /* Adjust as needed */
+  width: 100%;
+  overflow: hidden;
+  opacity: 0; /* Initial state for fade-in */
+  transform: translateY(50px); /* Start slightly below for the slide effect */
+  animation: popupAnimation 2s forwards; /* Animation for popup effect */
+}
+
+@keyframes popupAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  
-  /* Title Section */
-  .about-me h1 {
-    font-size: 2.5rem;
-    font-family: 'Bebas Neue', sans-serif;
-    color: #333;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Description Section */
-  .about-me .description {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
-    max-width: 800px;
-    margin-bottom: 50px;
-  }
-  
-  /* Two-column Layout */
-  .about-me .content {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 30px;
-  }
-  
-  /* Image Section */
-  .about-me .image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Send the video behind other content */
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 1; /* Ensure content is above the video */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+.about-me-top .background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.about-me-top .overlay-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+  padding: 120px;
+  border-radius: 10px;
+}
+
+.about-me-top h1 {
+  font-size: 2.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-me-top .description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Content section styling */
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 300px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  background-image: url("setup.jpg");
+  background-size: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  padding-top: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(42, 40, 40, 0.789);
+  color: #fcfcfc;
+  line-height: 1.6;
+}
+
+.listen-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.listen-button {
+  background-color: #9127142c;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.listen-button:hover {
+  background-color: #9a3127;
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+
+/* For tablets (width <= 768px) */
+@media (max-width: 768px) {
+  .about-me-top {
     height: 300px;
   }
-  
-  .about-me .image-container img {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  .about-me-top h1 {
+    font-size: 2rem;
   }
-  
-  /* Text Section */
-  .about-me .text-container {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .about-me-top .description {
+    font-size: 1rem;
   }
-  
-  .about-me .text-container p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
+
+  .content {
+    flex-direction: column; /* Stack content vertically */
+    gap: 20px;
   }
-  
-  /* Button for Listening to Latest Video */
-  .about-me .listen-button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px; /* Added margin to make the button lower */
+
+  .text-container {
+    padding: 15px;
   }
-  
-  .about-me .listen-button-container .listen-button {
-    background-color: #ff6347; /* A vibrant color for the button */
-    color: white;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.3s;
+
+  .listen-button {
+    font-size: 1rem;
+    padding: 8px 16px;
   }
-  
-  .about-me .listen-button-container .listen-button:hover {
-    background-color: #e55347; /* Darken the button color on hover */
-    transform: scale(1.05); /* Slightly increase the button size on hover */
+}
+
+/* For mobile devices (width <= 480px) */
+@media (max-width: 480px) {
+  .about-me-top {
+    height: 250px;
   }
-  
+
+  .about-me-top h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-me-top .description {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    flex-direction: column; /* Stack content vertically */
+    gap: 15px;
+  }
+
+  .image-container {
+    height: 200px;
+  }
+
+  .listen-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}

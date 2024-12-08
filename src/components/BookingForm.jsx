@@ -50,6 +50,13 @@ const BookingForm = () => {
   
   return (
     <div className="booking-container"> {/* Wrap the whole content in this div */}
+      <div className="video-background-container">
+        <video autoPlay muted loop className="background-video">
+          <source src="/moxies.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <div className="booking-form-container">
         <h2>Book DJ TOOLOUD for Your Event</h2>
 

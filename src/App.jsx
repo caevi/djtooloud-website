@@ -7,7 +7,7 @@ import Videos from './components/Videos';  // Import Videos component
 import BookingForm from './components/BookingForm'; // Import Booking Form component
 import Bookings from './components/Bookings'; // Import BookingList component
 import AboutMe from './components/AboutMe';  // Import About Me component
-
+import Mixes from './components/Mixes';
 const App = () => {
   return (
     <Router>
@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/booking" element={<BookingForm />} />  
         <Route path="/bookings" element={<Bookings />} />  
         <Route path="/about" element={<AboutMe />} />  {/* Add About Me Route */}
+        <Route path="/mixes" element={<Mixes />} />
       </Routes>
     </Router>
   );

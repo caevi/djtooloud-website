@@ -1,20 +1,22 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';  // You can install react-icons
+import { FaInstagram, FaTiktok, FaYoutube, FaMusic } from 'react-icons/fa';  // Use music as a placeholder
+import './Socials.css';
 
 const Socials = () => {
   return (
     <div className="socials">
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-        <FaFacebook className="social-icon" />
-      </a>
-      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-        <FaTwitter className="social-icon" />
+      {/* Replace Twitter with Music icon as a placeholder */}
+      <a href="https://soundcloud.com/carter-joel" target="_blank" rel="noopener noreferrer">
+        <FaMusic className="social-icon" />
       </a>
       <a href="https://www.instagram.com/djtooloud_/" target="_blank" rel="noopener noreferrer">
         <FaInstagram className="social-icon" />
       </a>
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-        <FaLinkedin className="social-icon" />
+      <a href="https://www.tiktok.com/@djtooloud" target="_blank" rel="noopener noreferrer">
+        <FaTiktok className="social-icon" />
+      </a>
+      <a href="https://www.youtube.com/@djtooloudyt" target="_blank" rel="noopener noreferrer">
+        <FaYoutube className="social-icon" />
       </a>
     </div>
   );
