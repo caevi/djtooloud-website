@@ -15,14 +15,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background-image: url("/loudlogo.png");
-  background-size: 1400px;
-  background-repeat:no-repeat;
-  background-position:center;
 }
 
 /* Home Page container */
 .home {
+  background-image: url("/loudlogo.png");
+  background-size: 1400px;
+  background-repeat:no-repeat;
+  background-position:center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,11 +142,11 @@ body {
 
 /* Home page specific styling for the Socials component */
 .home-socials .socials {
-  padding-top: 50px;
+  padding-top: 325px;
 }
 
 .home-socials .social-icon {
-  color: rgb(237, 224, 224); /* Set icons to white */
+  color: rgb(0, 0, 0); /* Set icons to white */
 }
 
 .home-socials .social-icon:hover {

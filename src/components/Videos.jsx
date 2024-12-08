@@ -1,6 +1,6 @@
 import React from 'react';
 import './Videos.css'; // Import styles for the videos component
-
+import Socials from './Socials';
 const Videos = () => {
   return (
     <div className="videos">
@@ -17,9 +17,6 @@ const Videos = () => {
     allowfullscreen>
   </iframe>
 </div>
-
-
-
       </div>
 
   );
