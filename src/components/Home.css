@@ -77,7 +77,7 @@ body {
   flex: 2;
   padding: 30px;
   text-align: left;
-  background-image: url("setup.jpg");
+  background-image: url("/setup.jpg");
   background-position: center;
   opacity: 0; /* Initially hidden */
   animation: fadeInUp 2s ease-out forwards; /* Delayed fade-in */
