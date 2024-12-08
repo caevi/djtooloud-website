@@ -176,5 +176,6 @@ body {
 
   .home-socials .social-icon {
     font-size: 2.5rem; /* Slightly smaller size for smaller screens */
+    color:black;
   }
 }

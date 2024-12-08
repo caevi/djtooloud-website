@@ -131,7 +131,7 @@ const BookingForm = () => {
                 />
               </label>
               <label>
-                Additional Message:
+                Additional Message/Song List:
                 <textarea
                   name="message"
                   value={formData.message}

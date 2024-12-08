@@ -118,7 +118,7 @@
   flex: 1;
   padding: 20px;
   background-color: #fff;
-  background-image: url("/setup.jpg");
+  background-image: url("setup.jpg");
   background-size: 500px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -158,18 +158,17 @@
 
 /* Media Queries */
 
-/* For tablets (width <= 768px) */
 @media (max-width: 768px) {
   .about-me-top {
-    height: 300px;
+    height: 1000px; /* Adjusted height for tablets */
   }
 
   .about-me-top h1 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Adjusted font size for tablets */
   }
 
   .about-me-top .description {
-    font-size: 1rem;
+    font-size: 1.3rem; /* Adjusted font size for description on tablets */
   }
 
   .content {
@@ -190,15 +189,15 @@
 /* For mobile devices (width <= 480px) */
 @media (max-width: 480px) {
   .about-me-top {
-    height: 250px;
+    height: 500px; /* Reduced height for mobile */
   }
 
   .about-me-top h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem; /* Smaller font size for mobile */
   }
 
   .about-me-top .description {
-    font-size: 0.9rem;
+    font-size: 1.1rem; /* Adjusted font size for readability */
   }
 
   .content {
