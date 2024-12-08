@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './BookingForm.css';
 
 const BookingForm = () => {
@@ -14,6 +14,7 @@ const BookingForm = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState(null); // For error handling
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -47,14 +48,35 @@ const BookingForm = () => {
       setError(error.message); // Set error message to show in case of failure
     }
   };
-  
+
+  useEffect(() => {
+    // Check if the screen width is less than or equal to 480px
+    const handleResize = () => {
+      if (window.innerWidth <= 480) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    // Run the function on component mount and resize
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <div className="booking-container"> {/* Wrap the whole content in this div */}
+    <div className="booking-container">
       <div className="video-background-container">
-        <video autoPlay muted loop className="background-video">
-          <source src="/moxies.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {/* Only render the video if not on mobile */}
+        {!isMobile && (
+          <video autoPlay muted loop className="background-video">
+            <source src="/moxies.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
       </div>
 
       <div className="booking-form-container">

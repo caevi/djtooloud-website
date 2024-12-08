@@ -65,7 +65,7 @@
 @media (max-width: 768px) {
   .videos {
       padding: 50px;
-      background-size: contain;
+      
   }
 
   .videos h1 {

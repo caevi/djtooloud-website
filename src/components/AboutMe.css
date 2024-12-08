@@ -189,7 +189,7 @@
 /* For mobile devices (width <= 480px) */
 @media (max-width: 480px) {
   .about-me-top {
-    height: 500px; /* Reduced height for mobile */
+    height: 600px; /* Reduced height for mobile */
   }
 
   .about-me-top h1 {
@@ -197,7 +197,7 @@
   }
 
   .about-me-top .description {
-    font-size: 1.1rem; /* Adjusted font size for readability */
+    font-size: 0.5rem; /* Adjusted font size for readability */
   }
 
   .content {

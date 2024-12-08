@@ -1,18 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for routing
 import './AboutMe.css';
 import Socials from './Socials'; // Import Socials component
 
-
 const AboutMe = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if the screen width is less than or equal to 480px
+    const handleResize = () => {
+      if (window.innerWidth <= 480) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    // Run the function on component mount and resize
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="about-me">
       {/* Autoplay video background */}
       <div className="about-me-top">
-        <video autoPlay muted loop className="background-video">
-          <source src="/tiktok.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {/* Only render the video if not on mobile */}
+        {!isMobile && (
+          <video autoPlay muted loop className="background-video">
+            <source src="/tiktok.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
         <div className="overlay-content">
           <h1>About DJ TOOLOUD</h1>
           <p className="description">
