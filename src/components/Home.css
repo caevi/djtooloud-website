@@ -15,6 +15,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  background-image: url("/loudlogo.png");
+  background-size: 1400px;
+  background-repeat:no-repeat;
+  background-position:center;
 }
 
 /* Home Page container */
@@ -27,6 +31,7 @@ body {
   text-align: center;
   padding: 20px;
   overflow: hidden; /* Prevent unwanted scrollbars */
+
 }
 
 /* Animating the home-content section */
@@ -66,8 +71,9 @@ body {
   width: 100%;
   height: auto;
   max-width: 500px;
+  border: 2px double black;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 816px rgba(0, 0, 0, 0.1);
   opacity: 0; /* Initially hidden */
   animation: popUp 1.5s ease-out forwards; /* Pop-up effect */
 }
@@ -78,6 +84,7 @@ body {
   padding: 30px;
   text-align: left;
   background-image: url("/setup.jpg");
+  border: 2px double black;
   background-position: center;
   opacity: 0; /* Initially hidden */
   animation: fadeInUp 2s ease-out forwards; /* Delayed fade-in */
@@ -129,5 +136,45 @@ body {
 
   .dj-image {
     max-width: 80%;
+  }
+}
+
+
+/* Home page specific styling for the Socials component */
+.home-socials .socials {
+  padding-top: 50px;
+}
+
+.home-socials .social-icon {
+  color: rgb(237, 224, 224); /* Set icons to white */
+}
+
+.home-socials .social-icon:hover {
+  color: #FF6F61; /* Vibrant color on hover */
+  transform: scale(1.2); /* Slightly increase icon size on hover */
+}
+
+/* Optional: If you want to make the text color white for the entire .socials section */
+.home-socials .socials {
+  color: white; /* This will make all the text inside the Socials component white on the home page */
+}
+
+/* Socials container */
+.home-socials .socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Increased spacing between icons */
+  margin-top: 40px; /* Space above the socials section */
+  margin-bottom: 20px; /* Space below the socials section */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .home-socials .socials {
+    gap: 20px; /* Adjust spacing for smaller devices */
+  }
+
+  .home-socials .social-icon {
+    font-size: 2.5rem; /* Slightly smaller size for smaller screens */
   }
 }

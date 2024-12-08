@@ -4,7 +4,7 @@ import './Videos.css'; // Import styles for the videos component
 const Videos = () => {
   return (
     <div className="videos">
-      <h1>Check out my latest mix!</h1>
+      <h1></h1>
       <div class="video-container">
   <iframe 
     width="600" 
