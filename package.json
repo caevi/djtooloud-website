@@ -7,7 +7,7 @@
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "npm install && npm run build",
+    "start": "npm install && npm run dev",
     "build": "node server.js"
   },
   "dependencies": {
