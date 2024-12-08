@@ -182,7 +182,7 @@
   }
 
   .about-me-top .description {
-    font-size: 0.5rem; /* Adjusted font size for readability */
+    font-size: 1rem; /* Increased font size for readability */
   }
 
   .content {
@@ -197,5 +197,10 @@
   .listen-button {
     font-size: 0.9rem;
     padding: 6px 12px;
+  }
+
+  /* Ensure the video background remains visible on small screens */
+  .background-video {
+    height: 100%; /* Ensure the video fills the space */
   }
 }
