@@ -29,7 +29,7 @@ const BookingForm = () => {
     console.log('Form Data:', formData); // Log form data to see if it's correct
   
     try {
-      const response = await fetch('http://localhost:5000/api/book-event', {
+      const response = await fetch('https://djtooloud-website-1.onrender.com/api/book-event', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
