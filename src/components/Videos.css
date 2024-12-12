@@ -33,6 +33,26 @@
 .video-socials .socials{
   padding-top:400px;
 }
+.check-out-mixes-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.check-out-mixes-button {
+  background-color: #111010c5; /* Color of the button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.check-out-mixes-button:hover {
+  background-color: #50444380;
+}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {

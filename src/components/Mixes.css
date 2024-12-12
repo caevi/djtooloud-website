@@ -1,45 +1,88 @@
-
 .mixes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #fffbfb;
-    text-align: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #fffbfb;
+  text-align: center;
+}
+
+.mixes h1 {
+  font-size: 2.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #7f2317;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mix-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mix-attribution {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin-top: 10px;
+}
+
+.mix-attribution a {
+  color: #68251b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mix-attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
   .mixes h1 {
-    font-size: 2.5rem;
-    font-family: 'Bebas Neue', sans-serif;
-    color: #7f2317;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 3rem; /* Larger title on desktop */
   }
-  
+
   .mix-container {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Larger container for desktops */
   }
-  
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .mixes h1 {
+    font-size: 2rem; /* Adjust font size for tablets */
+  }
+
+  .mix-container {
+    padding: 15px; /* Slightly smaller padding */
+    max-width: 750px; /* Adjust container width */
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
+  .mixes {
+    padding: 30px 10px; /* Reduce padding on small screens */
+  }
+
+  .mixes h1 {
+    font-size: 1.8rem; /* Smaller font size for the title */
+  }
+
+  .mix-container {
+    max-width: 100%; /* Make the container full width */
+    padding: 15px; /* Adjust padding for smaller devices */
+  }
+
   .mix-attribution {
-    font-size: 0.9rem;
-    color: #cccccc;
-    margin-top: 10px;
+    font-size: 0.8rem; /* Slightly smaller attribution text */
   }
-  
-  .mix-attribution a {
-    color: #68251b;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  
-  .mix-attribution a:hover {
-    text-decoration: underline;
-  }
-  
+}
