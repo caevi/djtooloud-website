@@ -5,29 +5,30 @@ const BookingForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phoneNumber: '',  // Add phone number field
+    phoneNumber: '',
     date: '',
     location: '',
     eventType: '',
-    message: ''
+    message: '',
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState(null); // For error handling
+  const [error, setError] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [loading, setLoading] = useState(false); // Add loading state
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    console.log('Form Data:', formData); // Log form data to see if it's correct
-  
+    setLoading(true); // Set loading state to true
+    setError(null); // Clear any previous error
+
     try {
       const response = await fetch('https://djtooloud-website-1.onrender.com/api/book-event', {
         method: 'POST',
@@ -36,21 +37,20 @@ const BookingForm = () => {
         },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
-        setIsSubmitted(true); // Show confirmation message
-        setError(null);  // Reset error state in case the request is successful
+        setIsSubmitted(true);
       } else {
         throw new Error('Booking failed, please try again later.');
       }
     } catch (error) {
-      console.error('Error booking event:', error);
-      setError(error.message); // Set error message to show in case of failure
+      setError(error.message);
+    } finally {
+      setLoading(false); // Reset loading state
     }
   };
 
   useEffect(() => {
-    // Check if the screen width is less than or equal to 480px
     const handleResize = () => {
       if (window.innerWidth <= 480) {
         setIsMobile(true);
@@ -59,18 +59,14 @@ const BookingForm = () => {
       }
     };
 
-    // Run the function on component mount and resize
     handleResize();
     window.addEventListener('resize', handleResize);
-
-    // Clean up the event listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <div className="booking-container">
       <div className="video-background-container">
-        {/* Only render the video if not on mobile */}
         {!isMobile && (
           <video autoPlay muted loop className="background-video">
             <source src="/moxies.mp4" type="video/mp4" />
@@ -89,7 +85,7 @@ const BookingForm = () => {
           </div>
         ) : (
           <>
-            {error && <div className="error-message">{error}</div>}  {/* Display error message if any */}
+            {error && <div className="error-message">{error}</div>}
 
             <form onSubmit={handleSubmit} className="booking-form">
               <label>
@@ -161,7 +157,9 @@ const BookingForm = () => {
                   rows="4"
                 />
               </label>
-              <button type="submit">Book Now</button>
+              <button type="submit" disabled={loading}>
+                {loading ? 'Loading...' : 'Book Now'}
+              </button>
             </form>
           </>
         )}

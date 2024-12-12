@@ -8,6 +8,10 @@
   align-items: center; /* Center the form horizontally and vertically */
   position: relative;
 }
+.booking-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
 
 .video-background-container {
   position: absolute;
