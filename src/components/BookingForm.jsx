@@ -82,6 +82,22 @@ const BookingForm = () => {
       <div className="booking-form-container">
         <h2>Book DJ TOOLOUD for Your Event</h2>
 
+        {/* Policy and Booking Fees Section */}
+        <div className="info-box">
+          <h3>Booking Policies & Fees</h3>
+          <p>
+            Please read through our booking policies and fee structure before confirming your booking:
+          </p>
+          <ul>
+      
+            <li>A non-refundable deposit of 20% is required to confirm your booking.</li>
+            <li>Once I recieve your email, I will contact you myself and discuss the pricing of your event </li>
+            <li>The full payment must be made 7 days before the event.</li>
+            <li>Cancellation within 72 hours of the event will result in a 50% charge.</li>
+            
+          </ul>
+        </div>
+
         {isSubmitted ? (
           <div className="confirmation-message">
             <h3>Thank you for your booking!</h3>

@@ -3,9 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff; /* Change navbar background to white */
+  background-color: #ffffff;
   padding: 15px 20px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
 }
@@ -13,52 +13,49 @@
 /* Logo container styles */
 .navbar .logo {
   display: flex;
-  align-items: center; /* Vertically center the items */
+  align-items: center;
 }
 
 .navbar .logo img {
-  height: 40px; /* Adjust logo size */
+  height: 40px;
   width: auto;
-  margin-right: 10px; /* Space between the logo and the text */
+  margin-right: 10px;
 }
-.navbar .logo .logo-img2{
-  height: 60px; /* Adjust logo size */
-  width: auto;
-  margin-right: 10px; /* Space between the logo and the text */
-}
+
 .navbar .logo h1 {
-  font-family: 'Matemasie', sans-serif; /* Or your preferred font */
-  font-size: 36px; /* Adjust size as needed */
+  font-family: 'Matemasie', sans-serif;
+  font-size: 36px;
   color: darkred;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin:0;
-
+  margin: 0;
 }
 
 /* Navbar links styling */
 .navbar ul {
   list-style: none;
-  display: flex;
+  display: flex; /* For desktop: horizontal navbar links */
   margin: 0;
   padding: 0;
+  flex-direction: row; /* Horizontal layout for desktop */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition for sliding */
 }
 
 .navbar li {
-  margin: 0 15px; /* Space out the items */
+  margin: 0 15px;
 }
 
 .navbar a {
   text-decoration: none;
-  color: black; /* Change link text color to black */
+  color: black;
   font-size: 16px;
   font-weight: 400;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #ff6347; /* Hover effect color (tomato) */
-  transform: scale(1.05); /* Slightly scale the link on hover */
+  color: #ff6347;
+  transform: scale(1.05);
 }
 
 /* Hamburger menu icon */
@@ -69,6 +66,7 @@
   width: 30px;
   height: 20px;
   cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
 
 .hamburger span {
@@ -76,7 +74,20 @@
   height: 3px;
   width: 100%;
   background-color: black;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Transform hamburger into X when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Responsive layout for smaller screens */
@@ -86,25 +97,34 @@
   }
 
   .navbar ul {
-    display: none; /* Hide navbar links initially */
-    flex-direction: column;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack the navbar items vertically */
     align-items: flex-start;
     background-color: #ffffff;
     position: absolute;
-    top: 70px; /* Adjust based on navbar height */
+    top: 100%; /* Position it just below the navbar */
     left: 0;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    margin: 0;
+    transform: translateY(-40px); /* Initially off-screen (above the navbar) */
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out; /* Smooth sliding and fading */
+    visibility: hidden; /* Ensure it's hidden */
   }
 
   .navbar ul.active {
-    display: flex; /* Show navbar links when active */
+    transform: translateY(0); /* Slide in from the bottom (visible) */
+    opacity: 1; /* Fade in */
+    visibility: visible; /* Ensure it's visible */
   }
 
   .navbar li {
     margin: 10px 0;
   }
+
   .navbar .logo .logo-img2 {
     height: 40px; /* Reduce the logo size for smaller screens */
   }

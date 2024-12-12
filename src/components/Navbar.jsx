@@ -19,7 +19,10 @@ const Navbar = () => {
       </div>
 
       {/* Hamburger Menu */}
-      <div className="hamburger" onClick={toggleMenu}>
+      <div
+        className={`hamburger ${menuOpen ? 'active' : ''}`}
+        onClick={toggleMenu}
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -28,19 +31,29 @@ const Navbar = () => {
       {/* Navigation Links */}
       <ul className={menuOpen ? 'nav-links active' : 'nav-links'}>
         <li>
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>About Me</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>
+            About Me
+          </Link>
         </li>
         <li>
-          <Link to="/videos" onClick={() => setMenuOpen(false)}>Videos</Link>
+          <Link to="/videos" onClick={() => setMenuOpen(false)}>
+            Videos
+          </Link>
         </li>
         <li>
-          <Link to="/mixes" onClick={()=> setMenuOpen(false)}>Mixes</Link>
+          <Link to="/mixes" onClick={() => setMenuOpen(false)}>
+            Mixes
+          </Link>
         </li>
         <li>
-          <Link to="/booking" onClick={() => setMenuOpen(false)}>Book an Event</Link>
+          <Link to="/booking" onClick={() => setMenuOpen(false)}>
+            Book an Event
+          </Link>
         </li>
       </ul>
     </nav>
