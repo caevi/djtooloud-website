@@ -14,7 +14,7 @@ const BookingForm = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false); // Add loading state
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -25,8 +25,8 @@ const BookingForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading state to true
-    setError(null); // Clear any previous error
+    setLoading(true);
+    setError(null);
 
     try {
       const response = await fetch('https://djtooloud-website-1.onrender.com/api/book-event', {
@@ -45,7 +45,7 @@ const BookingForm = () => {
     } catch (error) {
       setError(error.message);
     } finally {
-      setLoading(false); // Reset loading state
+      setLoading(false);
     }
   };
 

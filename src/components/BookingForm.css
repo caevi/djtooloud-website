@@ -1,16 +1,11 @@
-/* Add this for the booking-container */
 .booking-container {
-
-  padding: 20px; /* Add some padding around the content */
+  padding: 20px;
   min-height: 100vh; /* Ensure the container takes up the full viewport height */
   display: flex;
   justify-content: center;
-  align-items: center; /* Center the form horizontally and vertically */
+  align-items: center;
   position: relative;
-}
-.booking-form button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+  overflow: hidden; /* Prevent overflow issues with the video */
 }
 
 .video-background-container {
@@ -25,9 +20,9 @@
 
 .background-video {
   object-fit: cover;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Disable interactions with the video */
+  width: 100vw; /* Ensure the video covers the entire viewport width */
+  height: 100vh; /* Ensure the video covers the entire viewport height */
+  pointer-events: none;
 }
 
 .booking-form-container {
@@ -38,41 +33,42 @@
   margin: 0 auto;
   border-radius: 8px;
   text-align: center;
+  z-index: 1; /* Ensure the form is above the video */
 }
 
 .booking-form h2 {
-  font-size: 1.6rem; /* Adjusted font size */
-  margin-bottom: 20px; /* Increased margin for spacing */
-  color: #333; /* Keep header text color dark for contrast */
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .booking-form label {
   display: block;
-  margin: 12px 0; /* Increased margin for spacing */
-  font-size: 1rem; /* Slightly larger font size */
+  margin: 12px 0;
+  font-size: 1rem;
   color: #333;
 }
 
 .booking-form input,
 .booking-form textarea {
   width: 100%;
-  padding: 12px; /* Increased padding for input fields */
-  margin: 8px 0; /* Increased margin for spacing */
-  font-size: 1rem; /* Slightly larger font size */
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
-  color: #000;
   background-color: #fff;
+  color: #000;
 }
 
 .booking-form button {
   background-color: #ff6347;
   color: white;
-  padding: 12px 20px; /* Slightly larger padding */
+  padding: 12px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.1rem; /* Larger font size */
+  font-size: 1.1rem;
   margin-top: 20px;
   transition: background-color 0.3s;
 }
@@ -82,18 +78,18 @@
 }
 
 .booking-form button:disabled {
-  background-color: #ccc; /* Light gray color for disabled state */
-  cursor: not-allowed; /* Prevent pointer on disabled button */
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 .confirmation-message {
-  font-size: 1.4rem; /* Slightly larger font size */
-  color: #4CAF50; /* Green color for confirmation message */
+  font-size: 1.4rem;
+  color: #4CAF50;
   margin-top: 20px;
 }
 
 .error-message {
-  font-size: 1rem; /* Standard error font size */
-  color: red; /* Red color for error */
+  font-size: 1rem;
+  color: red;
   margin-top: 15px;
 }
