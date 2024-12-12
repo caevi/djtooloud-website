@@ -21,8 +21,8 @@
 
 .background-video {
   object-fit: cover;
-  width: 100vw; /* Ensure the video covers the entire viewport width */
-  height: 100vh; /* Ensure the video covers the entire viewport height */
+  width: auto; /* Ensure the video covers the entire viewport width */
+  height: 100%; /* Ensure the video covers the entire viewport height */
   pointer-events: none;
   user-select: none;
 }
