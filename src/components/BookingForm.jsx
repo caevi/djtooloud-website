@@ -18,7 +18,6 @@ const BookingForm = () => {
   const [isMobile, setIsMobile] = useState(false); // State to track if it's a mobile screen
 
   useEffect(() => {
-    // Function to check if the screen width is mobile-sized
     const checkIfMobile = () => {
       if (window.innerWidth <= 767) {
         setIsMobile(true);
@@ -27,13 +26,11 @@ const BookingForm = () => {
       }
     };
 
-    // Check on component mount and resize
-    checkIfMobile();
-    window.addEventListener('resize', checkIfMobile);
+    checkIfMobile(); // Initial check
+    window.addEventListener('resize', checkIfMobile); // Listen for window resize
 
-    // Clean up listener on component unmount
     return () => {
-      window.removeEventListener('resize', checkIfMobile);
+      window.removeEventListener('resize', checkIfMobile); // Cleanup on unmount
     };
   }, []);
 

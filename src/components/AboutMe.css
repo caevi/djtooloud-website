@@ -175,7 +175,7 @@
 @media (max-width: 480px) {
   .about-me-top {
     height: 600px; /* Reduced height for mobile */
-    background-image:url("/crowd2.jpg")
+    
   }
 
   .about-me-top h1 {
