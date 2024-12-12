@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './BookingForm.css';
 
 const BookingForm = () => {
@@ -15,6 +15,27 @@ const BookingForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(false); // State to track if it's a mobile screen
+
+  useEffect(() => {
+    // Function to check if the screen width is mobile-sized
+    const checkIfMobile = () => {
+      if (window.innerWidth <= 767) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    // Check on component mount and resize
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
+    // Clean up listener on component unmount
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -49,16 +70,17 @@ const BookingForm = () => {
     }
   };
 
- 
-
   return (
     <div className="booking-container">
-      <div className="video-background-container">
-        <video autoPlay muted loop className="background-video" tabIndex="-1">
-          <source src="/moxies.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      {/* Conditionally render video background only on non-mobile screens */}
+      {!isMobile && (
+        <div className="video-background-container">
+          <video autoPlay muted loop className="background-video" tabIndex="-1">
+            <source src="/moxies.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      )}
 
       <div className="booking-form-container">
         <h2>Book DJ TOOLOUD for Your Event</h2>
