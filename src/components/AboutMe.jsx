@@ -37,7 +37,7 @@ const AboutMe = () => {
         <div className="overlay-content">
           <h1>About DJ TOOLOUD</h1>
           <p className="description">
-            DJ TOOLOUD is known for his energetic mixes and ability to get any crowd moving. Whether it's a club, a festival, or a private event, he's sure to bring the heat and keep the music pumping all night long.
+          I am a DJ based out of Toronto. I am passionate about music and through mixing I hope to spread good vibes across the world. I make it a statement to keep learning and progressing with new techniques and genres. I have experience of formal events, school events, and parties. 
           </p>
         </div>
       </div>
@@ -50,7 +50,7 @@ const AboutMe = () => {
         {/* Text Section */}
         <div className="text-container">
           <p>
-            With years of experience, DJ TOOLOUD has curated a unique blend of high-energy tracks that combine various genres, ensuring there's always something for everyone.
+          I hope to always surpass my previous self and give my crowds an experience they will always remember. I hope to see you at the next gig!'
           </p>
 
           {/* Button for Listening to Latest Video */}
