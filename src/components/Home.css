@@ -45,6 +45,8 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+ 
+  animation: popUp 1.5s ease-out forwards;/* Fade in and move up */
   
 }
 
@@ -162,7 +164,7 @@ body {
 
 /* Home page specific styling for the Socials component */
 .home-socials .socials {
-  padding-top: 325px;
+  padding-top: 125px;
 }
 
 .home-socials .social-icon {
@@ -191,6 +193,7 @@ body {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .home-socials .socials {
+    
     gap: 20px; /* Adjust spacing for smaller devices */
   }
 
@@ -198,4 +201,8 @@ body {
     font-size: 2.5rem; /* Slightly smaller size for smaller screens */
     color:black;
   }
+  .home-text{
+   
+  }
+ 
 }

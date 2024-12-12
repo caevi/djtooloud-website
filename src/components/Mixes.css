@@ -78,8 +78,8 @@
   }
 
   .mix-container {
-    max-width: 100%; /* Make the container full width */
-    padding: 15px; /* Adjust padding for smaller devices */
+    max-width: 95%; /* Make the container full width */
+    padding: 5px; /* Adjust padding for smaller devices */
   }
 
   .mix-attribution {

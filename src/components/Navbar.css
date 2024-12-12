@@ -95,7 +95,9 @@
   .hamburger {
     display: flex; /* Show hamburger icon on small screens */
   }
-
+  .navbar .logo .logo-img {
+   display:none;/* Reduce the logo size for smaller screens */
+  }
   .navbar ul {
     list-style: none;
     display: flex;
