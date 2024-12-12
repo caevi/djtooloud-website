@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './BookingForm.css';
 
 const BookingForm = () => {
@@ -14,7 +14,6 @@ const BookingForm = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
   const [loading, setLoading] = useState(false); // Add loading state
 
   const handleChange = (e) => {
@@ -50,29 +49,13 @@ const BookingForm = () => {
     }
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 480) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
     <div className="booking-container">
       <div className="video-background-container">
-        {!isMobile && (
-          <video autoPlay muted loop className="background-video">
-            <source src="/moxies.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        )}
+        <video autoPlay muted loop className="background-video">
+          <source src="/moxies.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <div className="booking-form-container">

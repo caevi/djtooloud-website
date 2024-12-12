@@ -203,5 +203,6 @@
   /* Ensure the video background remains visible on small screens */
   .background-video {
     height: 100%; /* Ensure the video fills the space */
+    
   }
 }

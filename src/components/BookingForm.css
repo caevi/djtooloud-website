@@ -19,7 +19,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Ensure the video stays behind the content */
+
+  z-index: -1; /* Send the video behind other content */
+  pointer-events: none; /* Disable interactions with the video */
 }
 
 .background-video {
