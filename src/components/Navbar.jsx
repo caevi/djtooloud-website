@@ -52,7 +52,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/booking" onClick={() => setMenuOpen(false)}>
-            Book an Event
+            Book Now
           </Link>
         </li>
       </ul>

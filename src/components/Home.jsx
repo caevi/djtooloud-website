@@ -1,4 +1,3 @@
-// Home.jsx
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import './Home.css';
@@ -11,6 +10,11 @@ const Home = () => {
       <div className="home-content">
         <div className="home-image">
           <img src="tooloud.jpg" alt="DJ TOOLOUD" className="dj-image" />
+          
+          {/* Book Now button */}
+          <Link to="/booking">
+            <button className="book-now-btn">Book Now</button>
+          </Link>
         </div>
         <div className="home-text">
           <h1>DJ TOOLOUD</h1>

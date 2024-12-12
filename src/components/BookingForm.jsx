@@ -90,11 +90,12 @@ const BookingForm = () => {
           </p>
           <ul>
       
-            <li>A non-refundable deposit of 20% is required to confirm your booking.</li>
-            <li>Once I recieve your email, I will contact you myself and discuss the pricing of your event </li>
-            <li>The full payment must be made 7 days before the event.</li>
-            <li>Cancellation within 72 hours of the event will result in a 50% charge.</li>
-            
+            <li>For events costing $500 or more, a $100 deposit will be needed</li>
+            <li>For anything under that, it will be a $50 deposit</li>
+            <li>All deposits are non-refundable two weeks prior to your event date</li>
+            <li>Once I recieve your booking, I will contact you myself and discuss the pricing of your event </li>
+        
+        
           </ul>
         </div>
 
