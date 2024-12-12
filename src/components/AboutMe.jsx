@@ -8,7 +8,7 @@ const AboutMe = () => {
     <div className="about-me">
       <div className="about-me-top">
         {/* Video background stays in the background */}
-        <video autoPlay muted loop className="background-video" playsInline>
+        <video autoPlay muted loop className="background-video2" playsInline>
           <source src="/tiktok.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

@@ -31,7 +31,7 @@
 }
 
 /* Video background */
-.background-video {
+.background-video2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -201,7 +201,7 @@
   }
 
   /* Ensure the video background remains visible on small screens */
-  .background-video {
+  .background-video2 {
     height: 100%; /* Ensure the video fills the space */
     
   }
