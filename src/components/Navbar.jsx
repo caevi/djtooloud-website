@@ -15,6 +15,7 @@ const Navbar = () => {
       <div className="logo">
         <img src="loudlogo.png" alt="DJ Logo" className="logo-img" />
         <h1>DJ TOOLOUD</h1>
+        <img src="santa.png" alt="DJ Logo" className="logo-img2" />
       </div>
 
       {/* Hamburger Menu */}
