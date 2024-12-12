@@ -16,6 +16,7 @@
   height: 100%;
   z-index: -1; /* Send the video behind other content */
   pointer-events: none; /* Disable interactions with the video */
+  user-select: none;
 }
 
 .background-video {
@@ -23,6 +24,7 @@
   width: 100vw; /* Ensure the video covers the entire viewport width */
   height: 100vh; /* Ensure the video covers the entire viewport height */
   pointer-events: none;
+  user-select: none;
 }
 
 .booking-form-container {
@@ -92,4 +94,64 @@
   font-size: 1rem;
   color: red;
   margin-top: 15px;
+}
+
+/* Media Queries */
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+  .booking-form-container {
+    max-width: 700px;
+    padding: 60px;
+  }
+
+  .booking-form h2 {
+    font-size: 2rem;
+  }
+
+  .booking-form button {
+    font-size: 1.2rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .booking-form-container {
+    padding: 40px;
+    max-width: 500px;
+  }
+
+  .booking-form h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
+  .booking-container {
+    padding: 10px;
+  }
+
+  .booking-form-container {
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  .booking-form h2 {
+    font-size: 1.4rem;
+  }
+
+  .booking-form input,
+  .booking-form textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .booking-form button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  .background-video{
+    height:100%; 
+  }
 }

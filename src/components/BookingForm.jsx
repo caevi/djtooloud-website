@@ -49,10 +49,12 @@ const BookingForm = () => {
     }
   };
 
+ 
+
   return (
     <div className="booking-container">
       <div className="video-background-container">
-        <video autoPlay muted loop className="background-video">
+        <video autoPlay muted loop className="background-video" tabIndex="-1">
           <source src="/moxies.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

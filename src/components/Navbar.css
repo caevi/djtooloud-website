@@ -105,4 +105,7 @@
   .navbar li {
     margin: 10px 0;
   }
+  .navbar .logo .logo-img2 {
+    height: 40px; /* Reduce the logo size for smaller screens */
+  }
 }
