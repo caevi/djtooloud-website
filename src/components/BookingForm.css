@@ -141,6 +141,9 @@
   .video-background-container {
     display: none; /* Hide the video container on mobile screens */
   }
+  .background-video{
+    display:none;
+  }
 
   .booking-form-container {
     padding: 30px;
