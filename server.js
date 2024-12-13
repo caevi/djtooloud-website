@@ -157,6 +157,22 @@ app.get('/api/bookings', async (req, res) => {
     res.status(500).json({ error: 'Error fetching bookings.' });
   }
 });
+// Route to delete a booking by ID
+app.delete('/api/bookings/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const booking = await Booking.findByIdAndDelete(id); // Delete the booking by ID
+    if (!booking) {
+      return res.status(404).json({ message: 'Booking not found' });
+    }
+    res.json({ message: 'Booking successfully deleted' });
+  } catch (error) {
+    console.error('Error deleting booking:', error);
+    res.status(500).json({ error: 'Error deleting booking' });
+  }
+});
+
 
 // Start the server
 app.listen(port, () => {
