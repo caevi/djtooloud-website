@@ -164,7 +164,7 @@ body {
 
 /* Home page specific styling for the Socials component */
 .home-socials .socials {
-  padding-top: 175px;
+  padding-top: 400px;
 }
 
 .home-socials .social-icon {
@@ -193,7 +193,7 @@ body {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .home-socials .socials {
-    
+    padding-top:100px;
     gap: 20px; /* Adjust spacing for smaller devices */
   }
 
