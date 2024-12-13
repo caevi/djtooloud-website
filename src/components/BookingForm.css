@@ -95,6 +95,9 @@
   color: red;
   margin-top: 15px;
 }
+.info-box ul{
+  list-style-type:none; 
+}
 
 /* Media Queries */
 
