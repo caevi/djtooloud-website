@@ -193,7 +193,7 @@ body {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .home-socials .socials {
-    padding-top:100px;
+    padding-top:215px;
     gap: 20px; /* Adjust spacing for smaller devices */
   }
 
