@@ -1,13 +1,29 @@
 import React from 'react';
 import './Videos.css'; // Import styles for the videos component
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import Socials from './Socials';
 
 const Videos = () => {
   return (
     <div className="videos">
+
+
+      {/* Video Container */}
       <div className="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/Vsr70INp-GM?si=usMCcwd6iQ61jNF9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/5LN2kEQv_q0?si=vRqlbnNa4X_37lM8"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+
+        <iframe
+          src="https://www.youtube.com/embed/Vsr70INp-GM?si=usMCcwd6iQ61jNF9"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
       </div>
 
       {/* "Check Out My Mixes" Button */}
@@ -18,7 +34,6 @@ const Videos = () => {
           </button>
         </Link>
       </div>
-
     </div>
   );
 };

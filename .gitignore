@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+public/1216(1).mp4
 
 # Editor directories and files
 .vscode/*
