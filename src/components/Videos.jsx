@@ -17,13 +17,7 @@ const Videos = () => {
           allowFullScreen
         ></iframe>
 
-        <iframe
-          src="https://www.youtube.com/embed/Vsr70INp-GM?si=usMCcwd6iQ61jNF9"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+        
       </div>
 
       {/* "Check Out My Mixes" Button */}

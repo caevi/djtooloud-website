@@ -12,7 +12,7 @@ const Socials = () => {
       <a href="https://www.instagram.com/djtooloud_/" target="_blank" rel="noopener noreferrer">
         <FaInstagram className="social-icon" />
       </a>
-      <a href="https://www.tiktok.com/@djtooloud" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.tiktok.com/@plasticspooons" target="_blank" rel="noopener noreferrer">
         <FaTiktok className="social-icon" />
       </a>
       <a href="https://www.youtube.com/@djtooloudyt" target="_blank" rel="noopener noreferrer">
